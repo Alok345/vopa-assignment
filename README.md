@@ -1,70 +1,126 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+```markdown
+# 📝 VOPA Frontend Developer Assignment
 
-In the project directory, you can run:
+This project is a submission for the **Frontend Developer Assignment** for **Vowels of the People Association (VOPA)**.
 
-### `npm start`
+The task involved fetching tender data from a public API, presenting it in a clean and visually appealing way using React.js, and allowing users to view detailed tender information.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📚 Project Overview
 
-### `npm test`
+- **Project Name**: Tender Data Visualization
+- **Purpose**: Fetch real-time tender data from a public API and present it in a readable, interactive, and engaging table.
+- **Challenge**: The API does not allow direct browser requests (CORS policy), so a CORS proxy was used for fetching data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Fetch tender data using REST API (`https://tenders.guru/api/es/tenders`).
+- Display tenders in a responsive table format.
+- Show a maximum of 5 key fields for each tender:
+  - Title
+  - Category
+  - Buyer Name
+  - Deadline Date
+  - Supplier Name
+- On clicking a row, display detailed tender information.
+- Graceful error handling and loading state management.
+- Simple, clean, and user-friendly UI (expandable).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠 Tech Stack Used
 
-### `npm run eject`
+- **Frontend**: React.js (using `.jsx` file format)
+- **CSS**: Basic styling (can be extended using TailwindCSS or Material-UI)
+- **API**: [Tenders Guru API](https://tenders.guru/api/es/tenders)
+- **CORS Proxy**: [AllOrigins API](https://api.allorigins.win/) used to bypass CORS issue.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 📸 Screenshots
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Home Page - Tender Table
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Tender Table Screenshot](./screenshots/tender-table.png)
 
-## Learn More
+### Tender Details View
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![Tender Details Screenshot](./screenshots/tender-details.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> 📌 **Note**: Please create a `screenshots` folder and add your actual project screenshots before pushing.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ⚙️ How to Run Locally
 
-### Analyzing the Bundle Size
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/vopa-assignment.git
+   cd vopa-assignment
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-### Making a Progressive Web App
+3. Start the development server:
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Open in browser:
+   ```
+   http://localhost:3000
+   ```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🌐 Live Demo (Optional)
 
-### Deployment
+You can view the deployed project here:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+[🔗 View Live Demo on Vercel](https://vopa-assignment.vercel.app/)
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## ⚡ Key Notes
+
+- **CORS Policy Handling**:  
+  The original API (`https://tenders.guru/api/es/tenders`) does not allow direct requests from browsers due to CORS restrictions.  
+  To overcome this issue during development, I used a free proxy service:  
+  ```
+  https://api.allorigins.win/raw?url=
+  ```
+  This wraps the API call and enables cross-origin requests without server-side changes.
+
+- **Error Handling**:  
+  In cases where API data is incomplete (missing supplier name, purchaser info), the app safely handles it using optional chaining (`?.`).
+
+---
+
+## 🎯 Future Improvements (Optional Ideas)
+
+- Add sorting and filtering features on table columns.
+- Add pagination to handle large data sets.
+- Display tender details in a modal popup instead of expanding below.
+- Add loader/spinner while data is being fetched.
+- Use a design library like Material UI or TailwindCSS for more professional UI.
+
+---
+
+## 🙋‍♂️ Author
+
+- **Name**: Alok Kumar Panday
+- **Email**: akumar.panday31@gmail.com
+- **LinkedIn**: https://www.linkedin.com/in/alok31/
+
+---
+
+> Built with ❤️ for the VOPA Hiring Team to showcase technical skills, creativity, and attention to detail.
+```
